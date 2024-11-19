@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="post_options">
+        <item>Post</item>
+        <item>Story</item>
+    </string-array>
+</resources>

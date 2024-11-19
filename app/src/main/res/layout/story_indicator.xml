@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/primaryBackgroundColor">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/story_user_image"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginHorizontal="5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="2dp"
+        android:padding="5sp"
+        app:strokeColor="@color/quadrataryColor"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        tools:srcCompat="@tools:sample/avatars" />
+    <TextView
+        android:id="@+id/story_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="user 1"
+        android:fontFamily="@font/kleide_trial_regular"
+        android:textColor="@color/quadrataryColor"
+        android:textAlignment="center"/>
+</LinearLayout>

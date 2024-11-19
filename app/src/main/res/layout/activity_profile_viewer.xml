@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".profileviewerpage.ProfileViewerActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_page_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:background="@color/primaryBackgroundColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Profile"
+        app:titleTextAppearance="@null"
+        app:titleTextColor="@color/black"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:navigationIconTint="@color/primaryBackgroundColor"
+        />
+    <include
+        android:id="@+id/profileDetailInclude"
+        layout="@layout/profile_user_details"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profilePostsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

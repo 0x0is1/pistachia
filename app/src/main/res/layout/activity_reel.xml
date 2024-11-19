@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reelpage.ReelActivity">
+    <android.gesture.GestureOverlayView
+        android:id="@+id/reelGestureTracker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <VideoView
+        android:id="@+id/reelContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/reelLikeButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/ic_post_like"
+        />
+
+    <ImageView
+        android:id="@+id/reelCommentButton"
+        android:layout_width="35dp"
+        android:layout_marginEnd="15sp"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reelLikeButton"
+        app:srcCompat="@drawable/ic_post_comment" />
+
+    <ImageView
+        android:id="@+id/reelShareButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reelCommentButton"
+        app:srcCompat="@drawable/ic_post_share" />
+
+    <TextView
+        android:id="@+id/reelLikesCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="@color/primaryBackgroundColor"
+        app:layout_constraintTop_toBottomOf="@+id/reelLikeButton"
+        app:layout_constraintEnd_toEndOf="@+id/reelLikeButton"
+        app:layout_constraintStart_toStartOf="@+id/reelLikeButton" />
+
+    <TextView
+        android:id="@+id/reelCommentsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textColor="@color/primaryBackgroundColor"
+        app:layout_constraintTop_toBottomOf="@+id/reelCommentButton"
+        app:layout_constraintEnd_toEndOf="@+id/reelCommentButton"
+        app:layout_constraintStart_toStartOf="@+id/reelCommentButton" />
+
+    <TextView
+        android:id="@+id/reelSharesCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:textColor="@color/primaryBackgroundColor"
+        app:layout_constraintTop_toBottomOf="@+id/reelShareButton"
+        app:layout_constraintEnd_toEndOf="@+id/reelShareButton"
+        app:layout_constraintStart_toStartOf="@+id/reelShareButton" />
+
+    <ImageView
+        android:id="@+id/songAvatar"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reelSharesCount"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+    <TextView
+        android:id="@+id/reelTrackName"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginBottom="40dp"
+        android:text="track name"
+        android:fontFamily="@font/kleide_trial_regular"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:background="@drawable/reel_trackname_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/reelContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.04" />
+
+    <TextView
+        android:id="@+id/reelDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reel description"
+        android:textColor="@color/primaryBackgroundColor"
+        android:fontFamily="@font/kleide_trial_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.915" />
+
+    <TextView
+        android:id="@+id/reelUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kleide_trial_bold"
+        android:text="username"
+        android:textAlignment="center"
+        android:textColor="@color/primaryBackgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/reelContainer"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
+</androidx.constraintlayout.widget.ConstraintLayout>

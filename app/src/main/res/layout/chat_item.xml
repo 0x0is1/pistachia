@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="5dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/chatItemAvatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10sp"
+        android:background="@color/primaryTextColor"
+        android:layout_marginEnd="16dp"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/chatItemUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textColor="@color/quadrataryColor"
+            android:fontFamily="@font/kleide_trial_bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/chatItemMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="25sp"
+            android:gravity="center"
+            android:text="message gonna go hereeeeeeee"
+            android:textColor="@color/quadrataryColor"
+            android:fontFamily="@font/kleide_trial_regular"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>
